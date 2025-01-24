@@ -1,0 +1,144 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block topmenu %}
+
+<section id='top_bar_menu'>
+            <nav class="navbar navbar-expand-sm navbar-blue bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button
+                        class="navbar-toggler d-lg-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page"
+                                    >Home
+                                    <span class="visually-hidden">(current)</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="dropdownId"
+                                    data-bs-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    >{{user.username}}</a
+                                >
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="dropdownId"
+                                >
+                                    <a class="dropdown-item" href="#"
+                                        >Action 1</a
+                                    >
+                                    <a class="dropdown-item" href="logout"
+                                        >logout</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+            
+            
+            
+        </section>
+    
+
+{% endblock topmenu %}   
+
+{% block content %}  
+
+        <section class="bg-dark pb-5" style="background-color: #363736;" id=''> 
+            <div class='d-flex justify-content-center '>
+                <h2 class="text-light mt-4">Promotional Content</h2>
+            </div>        
+            <div id='promotional_content' class="d-flex justify-content-center " > 
+                               
+                <div class="card m-4">
+                    <img class="card-img-top" src="{% static 'img/cardbg.jpeg'%}"   alt="Title" />
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                        
+                    </div> 
+                </div>
+                <div class="card m-4">
+                    <img class="card-img-top" src="{% static 'img/cardbg.jpeg'%}"   alt="Title" />
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                        
+                    </div>
+                </div>
+
+                <div class="card m-4">
+                    <img class="card-img-top" src="{% static 'img/cardbg.jpeg'%}"   alt="Title" />
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                        
+                    </div>
+                </div>
+                                  
+            </div>
+        </section>
+
+
+        
+        <section class=" justify-content-center"  style="background-color: #363736;" id='all_games'>     
+            <div class='d-flex text-light  p-5'>
+                <h2 class="d-flex col-9 all_game_label_section">All the games here</h2> 
+                <form action="search" method='GET' class="d-flex p-3 ">
+                    
+                    <input 
+                        type="text"
+                        class=""
+                        name="search_text"
+                        id="search_text"
+                        aria-describedby="helpId"
+                        placeholder="Buscar"
+                    />
+                    <button   type="submit"  class="btn btn-primary "  >
+                        Search
+                    </button>
+                </form>               
+            </div> 
+            
+                           
+            
+
+            <div id='game_content'  class=" row row-cols-1 row-cols-md-4 mt-0 p-3">  
+                
+                
+                {% block game_content %}
+                {% include 'games.html' %}
+                    
+                {% endblock game_content %}
+                    
+                
+                                     
+            </div>
+        </section> 
+
+{% endblock content %}

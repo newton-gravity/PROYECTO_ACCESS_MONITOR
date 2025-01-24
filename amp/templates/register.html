@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+        <div class="p-4 d-flex justify-content-center " id="pills-register" >
+
+            <form action="" method="POST" class="  bg-light border rounded-5 p-4 col-sm|md|lg|xl|xxl">
+              {% csrf_token %}
+              <div class="text-center mb-4">
+                <p>Please enter your details:</p>                
+              </div>
+        
+              <!-- Name input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="registerName" name="registerName"class="form-control" />
+                <label class="form-label" for="registerName">Name</label>
+              </div>
+        
+              <!-- Username input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="registerUsername" name="registerUsername" class="form-control" />
+                <label class="form-label" for="registerUsername">Username</label>
+              </div>
+        
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="registerEmail" name="registerEmail" class="form-control" />
+                <label class="form-label" for="registerEmail">Email</label>
+              </div>
+        
+              <!-- Password input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="registerPassword" name="registerPassword" class="form-control" />
+                <label class="form-label" for="registerPassword">Password</label>
+              </div>
+        
+              <!-- Repeat Password input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="registerRepeatPassword" name="registerRepeatPassword"  class="form-control" />
+                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+              </div>
+        
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                  aria-describedby="registerCheckHelpText" />
+                <label class="form-check-label" for="registerCheck">
+                  I have read and agree to the terms
+                </label>
+              </div>
+        
+              <!-- Submit button -->
+              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3">Sign in</button>
+            </form>
+          </div>
+
+{% endblock content %}
+
+

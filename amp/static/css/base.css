@@ -1,0 +1,24 @@
+label{
+    font-size: small;
+}
+
+
+.card{
+    box-shadow: 0px 2px 15px rgb(10, 10, 10),
+                0px 2px 20px rgb(31, 68, 30);                
+    
+    
+}
+.row{
+    margin-top: 40 !important; 
+    margin-left: 5 !important;
+}
+#card{
+    background-color: #4a8533af;
+    border-color: rgb(10, 10, 10);
+    border-width: 2px 2px 2px 2px;
+    
+}
+.all_game_label_section{
+    color: rgb(43, 255, 0) ;
+}

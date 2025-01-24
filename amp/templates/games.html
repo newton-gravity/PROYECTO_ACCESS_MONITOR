@@ -1,0 +1,28 @@
+
+
+{% block game_content %}
+    
+
+    
+                {% if  messages %}
+                    <h3 class = "">{{ messages }}</h3>
+                {% endif %}        
+                           
+                
+                {% for game in games  %}
+                <div class="row justify-content-center align-items-center text-light ">
+                    <div class="col">
+                        <div class="card m-3 h-50 " id="card">
+                            <img class="card-img-top"  src="{{game.image.url}}" width="200" height="160" alt="{{game.game_name}}" />
+                            <div class="card-body">
+                            <h4 class="card-title">{{game.game_name}}</h4>
+                            <p class="card-text"><label>Category: </label> {{game.category}}</p>                            
+                            <p class="card-text"><label>Developer: </label> {{game.developer}}</p>
+                            <p class="card-text"><label>Date:</label> {{game.launch_date}}</p>
+                             
+                            </div> 
+                        </div>
+                    </div>                    
+                </div>    
+                {% endfor %}
+{% endblock game_content %}

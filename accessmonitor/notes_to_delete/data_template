@@ -1,0 +1,52 @@
+
+Lista del contenido de la orden
+1-Nombre Empresa
+2-fecha de realizada
+3-nro orden
+4-nombre del player
+5-categoria del player(VIP, Regular)
+6-nomBRE Servicio 
+7-precio del Servicio
+8-descuento(si aplica)
+9-oferta special(si aplica)
+10-precio total orden
+11-Ingreso a caja
+12-dinero de vuelto
+13-Mensaje personalizado Al player
+14-datos empresa
+
+Registro de ordenes:
+1-Nro orden
+2-fecha orden
+3-precio de la orden
+4-nombre del player 
+3-stado de la orden(realizada, cancelada)
+4-motivo cancelacion
+5-fecha actualizacion
+6-staff que realizo la orden
+7-staff que cancelo la orden
+
+
+Servicio:
+1-nombre
+2-tipo(oferta,special,normal)
+3-tiempo contratado
+4-descuento(si aplica)
+5-extra(si aplica)
+6-status(activo, inactivo)
+7-fecha expira servicio
+8-precio del servicio
+
+
+Player:
+1-nombre
+2-correo email
+2-nro id
+3-alias
+4-fecha creado
+5-categoria(VIP, regular)
+6-fecha actualizado
+
+
+
+
